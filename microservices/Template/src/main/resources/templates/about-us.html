@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>About Food Lover Restaurant</title>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>About Us</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2>Our Story</h2>
+                        <p>Welcome to Food Lover Restaurant, where passion meets culinary excellence. Since our establishment, we've been dedicated to creating extraordinary dining experiences that celebrate the art of fine cuisine.</p>
+                        <p>Our journey began with a simple vision: to serve exceptional food that brings people together and creates lasting memories. Today, we continue to uphold this tradition while innovating and evolving our menu to delight our guests.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img th:src="@{/default/images/3101841-41.png}" alt="Restaurant Interior" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="food-quality-section">
+        <div class="wave-background"></div>
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>Why Choose Us</h2>
+                    <p>At Food Lover Restaurant, we pride ourselves on:</p>
+                    <ul class="quality-list">
+                        <li><i class="bi bi-check-circle"></i> Fresh, locally-sourced ingredients</li>
+                        <li><i class="bi bi-check-circle"></i> Expert chefs with international experience</li>
+                        <li><i class="bi bi-check-circle"></i> Unique fusion of traditional and modern cuisine</li>
+                        <li><i class="bi bi-check-circle"></i> Elegant ambiance and exceptional service</li>
+                    </ul>
+                </div>
+                <div class="images-wrapper">
+                    <div class="circular-image image-1">
+                        <img th:src="@{/default/images/3101841-39.png}" alt="Signature Dish">
+                    </div>
+                    <div class="circular-image image-2">
+                        <img th:src="@{/default/images/3101841-37.png}" alt="Fresh Ingredients">
+                    </div>
+                    <div class="circular-image image-3">
+                        <img th:src="@{/default/images/3101841-35.png}" alt="Chef Special">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="text-center">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img th:src="@{/default/images/gk1.jpg}" alt="Head Chef">
+                        </div>
+                        <div class="member-info">
+                            <h3>John Doe</h3>
+                            <p class="position">Head Chef</p>
+                            <p class="description">With over 15 years of experience in international cuisine, Chef John brings creativity and excellence to every dish.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img th:src="@{/default/images/gk2.jpg}" alt="Sous Chef">
+                        </div>
+                        <div class="member-info">
+                            <h3>Jane Smith</h3>
+                            <p class="position">Sous Chef</p>
+                            <p class="description">Specializing in pastry and desserts, Chef Jane adds a sweet touch of perfection to our menu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img th:src="@{/default/images/gk3.jpg}" alt="Executive Chef">
+                        </div>
+                        <div class="member-info">
+                            <h3>Mike Johnson</h3>
+                            <p class="position">Executive Chef</p>
+                            <p class="description">Chef Mike's innovative approach to traditional cuisine creates unique and unforgettable flavors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="awards-section">
+        <div class="container">
+            <h2 class="text-center">Our Achievements</h2>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="award-item">
+                        <i class="bi bi-star-fill"></i>
+                        <h3>5 Star Rating</h3>
+                        <p>Culinary Excellence</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="award-item">
+                        <i class="bi bi-trophy"></i>
+                        <h3>Best Restaurant</h3>
+                        <p>2023 Award</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="award-item">
+                        <i class="bi bi-people"></i>
+                        <h3>10K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="award-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <h3>15+</h3>
+                        <p>Years of Service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

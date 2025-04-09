@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Services</title>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1>Our Services</h1>
+                    <p>Discover our premium dining services and experiences</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <div class="container">
+            <div class="row">
+                <!-- Service Card 1 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-house-door"></i>
+                        </div>
+                        <h3>Dine-In Experience</h3>
+                        <p>Enjoy our cozy atmosphere and exceptional service in our beautifully designed restaurant.</p>
+                        <a href="#" class="service-link">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <h3>Delivery Service</h3>
+                        <p>Fast and reliable delivery to your doorstep, maintaining the quality of our dishes.</p>
+                        <a href="#" class="service-link">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <h3>Event Catering</h3>
+                        <p>Professional catering services for your special events and celebrations.</p>
+                        <a href="#" class="service-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Service -->
+            <div class="featured-service">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="/default/images/3101841-49.png" alt="Premium Service" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="featured-content">
+                            <h2>Premium Dining Experience</h2>
+                            <p>Indulge in our exclusive dining experience with personalized service and premium menu selections.</p>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle"></i> Private dining rooms</li>
+                                <li><i class="bi bi-check-circle"></i> Customized menu options</li>
+                                <li><i class="bi bi-check-circle"></i> Professional staff</li>
+                                <li><i class="bi bi-check-circle"></i> Special occasion planning</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Detail</title>
+</head>
+<body>
+    <div layout:fragment="main-content">
+        <div class="product-detail-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Product Image -->
+                    <div class="col-md-6">
+                        <div class="product-image-wrapper">
+                            <!-- Sửa imageUrl thành image cho khớp với entity -->
+                            <img th:src="${product.image != null ? product.image : '/default/images/placeholder.png'}" 
+                                 class="img-fluid product-main-image" alt="Product Image">
+                        </div>
+                    </div>
+                    
+                    <!-- Product Info -->
+                    <div class="col-md-6">
+                        <div class="product-info-wrapper">
+                            <!-- Sửa productName thành name cho khớp với entity -->
+                            <h1 class="product-title" th:text="${product.name}">Product Name</h1>
+                            <div class="product-meta">
+                                <div class="product-price" th:text="${'$' + #numbers.formatDecimal(product.price, 0, 2)}">$50.00</div>
+                                
+                                <!-- Thêm phần description -->
+                                <div class="product-description mt-4">
+                                    <h4>Mô tả sản phẩm</h4>
+                                    <p th:text="${product.description}" class="text-muted">Product description here</p>
+                                </div>
+                            </div>
+                            
+                            <div class="product-actions">
+                                <div class="quantity-wrapper">
+                                    <label for="quantity">Quantity:</label>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn" onclick="decrementQuantity()">-</button>
+                                        <input type="number" id="quantity" value="1" min="1" class="quantity-input">
+                                        <button class="qty-btn" onclick="incrementQuantity()">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="action-buttons">
+                                    <!-- Thêm data-id để lưu ID sản phẩm -->
+                                    <button class="btn btn-primary add-to-cart-btn" th:data-id="${product.id}">
+                                        <i class="bi bi-cart-plus"></i> Add to Cart
+                                    </button>
+                                    <a th:href="@{/shop}" class="btn btn-secondary">
+                                        <i class="bi bi-arrow-left"></i> Back to Shop
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Giữ nguyên JavaScript cho chức năng quantity -->
+    <script>
+        function incrementQuantity() {
+            const input = document.getElementById('quantity');
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decrementQuantity() {
+            const input = document.getElementById('quantity');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+    </script>
+</body>
+</html>

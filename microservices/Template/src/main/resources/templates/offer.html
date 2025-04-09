@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Special Offers</title>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1>Special Offers</h1>
+                    <p>Discover our amazing deals and promotions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offers Section -->
+    <div class="offers-section">
+        <div class="container">
+            <!-- Featured Offer -->
+            <div class="featured-offer">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="/default/images/3101841-49.png" alt="Featured Offer" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="offer-content">
+                            <span class="offer-badge">Featured Deal</span>
+                            <h2>30% Off on All Meals</h2>
+                            <p>Get amazing discounts on our entire menu this weekend!</p>
+                            <div class="offer-timer">
+                                <div class="countdown">
+                                    <span>2</span> Days
+                                    <span>15</span> Hours
+                                    <span>45</span> Minutes
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">Claim Offer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regular Offers Grid -->
+            <div class="offers-grid">
+                <div class="row">
+                    <!-- Offer Card 1 -->
+                    <div class="col-md-4">
+                        <div class="offer-card">
+                            <div class="offer-image">
+                                <img src="/default/images/3101841-50.png" alt="Offer 1">
+                                <span class="discount-badge">-20%</span>
+                            </div>
+                            <div class="offer-details">
+                                <h3>Lunch Special</h3>
+                                <p>20% off on all lunch menu items</p>
+                                <span class="validity">Valid until: Dec 31, 2023</span>
+                                <a href="#" class="btn btn-outline-primary">Get Deal</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Card 2 -->
+                    <div class="col-md-4">
+                        <div class="offer-card">
+                            <div class="offer-image">
+                                <img src="/default/images/3101841-47.png" alt="Offer 2">
+                                <span class="discount-badge">-15%</span>
+                            </div>
+                            <div class="offer-details">
+                                <h3>Family Package</h3>
+                                <p>15% off on family-size orders</p>
+                                <span class="validity">Valid until: Dec 31, 2023</span>
+                                <a href="#" class="btn btn-outline-primary">Get Deal</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Card 3 -->
+                    <div class="col-md-4">
+                        <div class="offer-card">
+                            <div class="offer-image">
+                                <img src="/default/images/3101841-39.png" alt="Offer 3">
+                                <span class="discount-badge">-25%</span>
+                            </div>
+                            <div class="offer-details">
+                                <h3>Weekend Special</h3>
+                                <p>25% off on weekend dinner</p>
+                                <span class="validity">Valid until: Dec 31, 2023</span>
+                                <a href="#" class="btn btn-outline-primary">Get Deal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

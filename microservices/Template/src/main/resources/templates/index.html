@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default/layout}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Food Lover Restaurant</title>
+</head>
+
+<body>
+<div layout:fragment="main-content">
+    <!-- Start Hero Section -->
+    <!-- Start Hero Section -->
+    <div class="hero" style="background-image: url('/default/images/3101841-58.png'); background-size: cover; background-position: center; position: relative;">
+        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.7); z-index: 1;"></div>
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-6 order-2 order-md-1">
+                    <div class="hero-image">
+                        <img th:src="@{/default/images/3101841-60.png}" alt="Breakfast" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 order-1 order-md-2"> 
+                    <div class="hero-content">
+                        <h1>Contact Us For Best Breakfast</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod.</p>
+                        <a th:href="@{/contact}" class="btn btn-warning">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- Start About Us Section -->
+    <div class="about-section">
+        <div class="container">
+            <div class="about-image">
+                <img th:src="@{/default/images/3101841-35.png}" alt="About Us">
+            </div>
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            </div>
+        </div>
+    </div>
+    <!-- End About Us Section -->
+
+    <!-- Start Our Food Quality Section -->
+    <section class="food-quality-section">
+        <div class="wave-background"></div>
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>Our Food Quality</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                </div>
+                <div class="images-wrapper">
+                    <div class="circular-image image-1">
+                        <img th:src="@{/default/images/3101841-50.png}" alt="Food Quality">
+                    </div>
+                    <div class="circular-image image-2">
+                        <img th:src="@{/default/images/3101841-49.png}" alt="Food Quality">
+                    </div>
+                    <div class="circular-image image-3">
+                        <img th:src="@{/default/images/3101841-47.png}" alt="Food Quality">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Food Quality Section -->
+
+    <!-- Start Gallery Section -->
+    <div class="gallery-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Food Gallery</h2>
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6">
+                    <img th:src="@{/default/images/3101841-35.png}" alt="Gallery" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img th:src="@{/default/images/3101841-37.png}" alt="Gallery" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img th:src="@{/default/images/3101841-41.png}" alt="Gallery" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img th:src="@{/default/images/3101841-39.png}" alt="Gallery" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img th:src="@{/default/images/3101841-43.png}" alt="Gallery" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img th:src="@{/default/images/3101841-45.png}" alt="Gallery" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Gallery Section -->
+
+    <!-- Start Enjoy Our Food Section -->
+    <div class="enjoy-food-section py-5" style="background-image: url('/default/images/3101841-30.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center text-white p-5" style="border: 2px solid #FFA500; background-color: rgba(0, 0, 0, 0.7);">
+                        <h2 class="mb-4">Enjoy Our Food</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Enjoy Our Food Section -->
+
+    <!-- Start Menu Section -->
+    <div class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img th:src="@{/default/images/3101841-24.png}" alt="Menu Item">
+                    <div class="menu-item-content">
+                        <h3>ITALIAN SOURCE MUSHROOM</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
+                        <div class="price">Price: $12.00</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img th:src="@{/default/images/3101841-26.png}" alt="Menu Item">
+                    <div class="menu-item-content">
+                        <h3>ITALIAN SOURCE MUSHROOM</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
+                        <div class="price">Price: $12.00</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img th:src="@{/default/images/3101841-28.png}" alt="Menu Item">
+                    <div class="menu-item-content">
+                        <h3>ITALIAN SOURCE MUSHROOM</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
+                        <div class="price">Price: $12.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Menu Section -->
+</div>
+</body>
+</html>

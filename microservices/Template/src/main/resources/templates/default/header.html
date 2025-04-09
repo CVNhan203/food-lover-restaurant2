@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Lover Restaurant</title>
+</head>
+<body>
+
+<!-- Start Header/Navigation -->
+<header class="site-header" style="background-image: url('/default/images/3101841-30.png'); background-size: cover; background-position: center; position: relative;">
+    <!-- Overlay để làm mờ background -->
+    <div class="header-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.7); z-index: 1;"></div>
+    
+    <nav class="custom-navbar navbar navbar-expand-md" arial-label="Food Lover navigation bar" style="position: relative; z-index: 2; padding: 20px 0;">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarsFoodLover">
+                <ul class="custom-navbar-nav navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}" style="color: #FFA500;">HOME</a>
+                    </li>
+                    <li><a class="nav-link" th:href="@{/about-us}" style="color: #ffffff;">ABOUT</a></li>
+                    <li><a class="nav-link" th:href="@{/shop}" style="color: #ffffff;">MENUS</a></li>
+                    <li><a class="nav-link" th:href="@{/offer}" style="color: #ffffff;">OFFERS</a></li>
+                </ul>
+                <!-- Logo Center -->
+                <a class="navbar-brand mx-auto" th:href="@{/}">
+                    <img th:src="@{/default/images/3101841-61.png}" alt="" style="max-height: 70px;">
+                </a>
+
+                <ul class="custom-navbar-nav navbar-nav ms-auto">
+                    <li><a class="nav-link" th:href="@{/service}" style="color: #ffffff;">GALLERY</a></li>
+                    <li><a class="nav-link" th:href="@{/contact}" style="color: #ffffff;">CONTACT</a></li>
+                    <li><a class="nav-link" th:href="@{/blog}" style="color: #ffffff;">BLOG</a></li>
+                </ul>
+                <a href="/login" class="login-icon" th:if="${#authentication.principal == 'anonymousUser'}">
+                    <i class="fas fa-user"></i>
+                </a>
+                <div class="user-actions" th:unless="${#authentication.principal == 'anonymousUser'}">
+                    <div class="dropdown">
+                        <a href="#" class="login-icon dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i>
+                            <span th:text="${#authentication.principal.username}"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" href="/admin">Admin Dashboard</a></li>
+                            <form th:action="@{/logout}" method="post">
+                            <button type="submit" class="dropdown-item">Logout</button>
+                            <li sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" href="/system">System Management</a></li>
+                            <li>
+                            </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+</body>
+</html>

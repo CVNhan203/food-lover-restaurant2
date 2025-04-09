@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Blog</title>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1>Latest News & Articles</h1>
+                    <p>Stay updated with our latest food stories and culinary adventures</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="blog-main-section">
+        <div class="container">
+            <!-- Featured Post -->
+            <div class="featured-post">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="featured-image">
+                            <img src="/default/images/3101841-45.png" alt="Featured Post" class="img-fluid">
+                            <div class="category">Featured</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="featured-content">
+                            <span class="date">June 15, 2023</span>
+                            <h2>The Art of Fine Dining: A Culinary Journey</h2>
+                            <p>Discover the secrets behind our signature dishes and the passion that drives our culinary excellence.</p>
+                            <div class="post-meta">
+                                <span><i class="bi bi-person"></i> By Admin</span>
+                                <span><i class="bi bi-chat"></i> 24 Comments</span>
+                                <span><i class="bi bi-heart"></i> 456 Likes</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="row blog-grid">
+                <!-- Blog Card 1 -->
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="/default/images/3101841-43.png" alt="Blog Post">
+                            <div class="category">Recipes</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="date">June 10, 2023</span>
+                            <h3>Summer Special Recipes</h3>
+                            <p>Refreshing recipes perfect for hot summer days...</p>
+                            <div class="post-meta">
+                                <span><i class="bi bi-person"></i> Chef John</span>
+                                <span><i class="bi bi-heart"></i> 234 Likes</span>
+                            </div>
+                            <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="/default/images/3101841-54.png" alt="Blog Post">
+                            <div class="category">Tips</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="date">June 8, 2023</span>
+                            <h3>Kitchen Secrets Revealed</h3>
+                            <p>Professional cooking tips from our expert chefs...</p>
+                            <div class="post-meta">
+                                <span><i class="bi bi-person"></i> Chef Maria</span>
+                                <span><i class="bi bi-heart"></i> 189 Likes</span>
+                            </div>
+                            <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="/default/images/3101841-37.png" alt="Blog Post">
+                            <div class="category">Events</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="date">June 5, 2023</span>
+                            <h3>Food Festival 2023</h3>
+                            <p>Join us for an amazing culinary celebration...</p>
+                            <div class="post-meta">
+                                <span><i class="bi bi-person"></i> Event Team</span>
+                                <span><i class="bi bi-heart"></i> 312 Likes</span>
+                            </div>
+                            <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

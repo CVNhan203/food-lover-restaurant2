@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+    <div layout:fragment="main-content">
+        <div class="untree_co-section product-section before-footer-section">
+            <div class="container">
+                <h2 class="section-title">Our Menu</h2>
+                
+                <div class="filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">New Arrivals</button>
+                    <button class="filter-btn">Best Sellers</button>
+                    <button class="filter-btn">Special Offers</button>
+                </div>
+                
+                <div class="row">
+                    <!-- Sửa vòng lặp th:each để khớp với dữ liệu -->
+                    <div class="col-12 col-md-4 col-lg-3 mb-5" th:each="product : ${products}">
+                        <div class="product-item">
+                            <!-- Hiển thị hình ảnh sản phẩm -->
+                            <img th:src="${product.image != null ? product.image : '/default/images/placeholder.png'}" 
+                                 class="img-fluid product-thumbnail" alt="Product Image">
+                            <!-- Hiển thị tên sản phẩm -->
+                            <h3 class="product-title" th:text="${product.name}">Product Name</h3>
+                            <!-- Hiển thị giá sản phẩm -->
+                            <strong class="product-price" th:text="${'$' + #numbers.formatDecimal(product.price, 0, 2)}">$50.00</strong>
+                            <div class="product-buttons">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <!-- Cập nhật link để trỏ đến product-detail -->
+                                <a th:href="@{/product-detail/{id}(id=${product.id})}" class="btn-view-details">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
